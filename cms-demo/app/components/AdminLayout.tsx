@@ -1,7 +1,6 @@
 "use client";
 import AdminSidebar from "./AdminSidebar";
 import {
-  SidebarInset,
   SidebarTrigger,
   SidebarProvider,
 } from "@/components/ui/sidebar";
@@ -40,12 +39,6 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     }
     if (pathname.startsWith("/admin/cennik/szablon/")) {
       return { title: "Edytuj cennik", description: "" };
-    }
-    if (pathname === "/admin/magazyn") {
-      return {
-        title: "Magazyn",
-        description: "Stan magazynu i kody QR dostaw",
-      };
     }
     return {
       title: "Panel administracyjny",

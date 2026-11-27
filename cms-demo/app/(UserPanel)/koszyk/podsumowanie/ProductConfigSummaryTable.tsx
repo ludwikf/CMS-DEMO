@@ -70,9 +70,7 @@ export function getSectionFields(
     .map((id: string) => getInputConfigById(id))
     .filter(Boolean)
     .map((input) => ({ configKey: input!.configKey, label: input!.label }));
-  const extra =
-    "extraKeys" in section && section.extraKeys ? section.extraKeys : [];
-  return [...fromInputs, ...extra];
+  return fromInputs;
 }
 
 function formatConfigValue(

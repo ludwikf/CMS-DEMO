@@ -20,7 +20,6 @@ import {
   Package,
   ClipboardList,
   Calculator,
-  Warehouse,
   X,
 } from "lucide-react";
 import {
@@ -53,12 +52,6 @@ export default function AdminSidebar({ className }: { className?: string }) {
       href: "/admin/cennik",
       icon: Calculator,
       isActive: pathName.startsWith("/admin/cennik"),
-    },
-    {
-      title: "Magazyn",
-      href: "/admin/magazyn",
-      icon: Warehouse,
-      isActive: pathName.startsWith("/admin/magazyn"),
     },
   ];
 

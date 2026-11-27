@@ -158,24 +158,3 @@ enum OrderStatus {
   FINISHED     // Order completed
   PENDING      // Legacy status - keep for compatibility
 }
-
-model WarehouseStock {
-  id        String   @id @default(cuid())
-  name      String   @unique
-  quantity  Int      @default(0)
-  unit      String?  @default("szt")
-  updatedAt DateTime @updatedAt
-
-  @@map("warehouse_stock")
-}
-
-model WarehouseIntake {
-  id        String   @id @default(cuid())
-  intakeId  String   @unique
-  label     String?
-  items     Json
-  createdAt DateTime @default(now())
-
-  @@index([createdAt])
-  @@map("warehouse_intakes")
-}
